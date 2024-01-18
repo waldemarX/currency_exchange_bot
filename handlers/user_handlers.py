@@ -2,7 +2,7 @@ from aiogram import F, Router
 from aiogram.types import Message, ReplyKeyboardRemove
 from aiogram.filters import Command, CommandStart
 from lexicon.lexicon import LEXICON_RU
-from keyboards.keyboards import my_keyboard, data
+from keyboards.keyboards import currency_keyboard, data
 
 router = Router()
 
@@ -21,7 +21,7 @@ async def process_help_command(message: Message):
 async def process_valute(message: Message):
     await message.answer(
         text=LEXICON_RU['valute'],
-        reply_markup=my_keyboard
+        reply_markup=currency_keyboard
     )
 
 
