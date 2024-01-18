@@ -17,7 +17,7 @@ async def process_help_command(message: Message):
     await message.answer(text=LEXICON_RU['/help'])
 
 
-@router.message(Command(commands='valute'))
+@router.message(Command(commands='currency'))
 async def process_valute(message: Message):
     await message.answer(
         text=LEXICON_RU['valute'],
