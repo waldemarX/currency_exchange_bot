@@ -1,9 +1,7 @@
-from aiogram import F, Bot, Router
-from aiogram.types import Message, ReplyKeyboardRemove
+from aiogram import Bot, Router
+from aiogram.types import Message
 from aiogram.filters import Command, CommandStart
 from lexicon.lexicon import LEXICON_RU
-from keyboards.keyboards import buttons, create_inline_kb
-from services.sevices import get_currency, available_currency
 
 router = Router()
 
