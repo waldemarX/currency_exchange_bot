@@ -1,9 +1,9 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 from aiogram.utils.keyboard import ReplyKeyboardBuilder
-from services.sevices import data
+from services.sevices import available_currency
 
 currency_keyboard: list[KeyboardButton] = [
-    KeyboardButton(text=str(i)) for i in data["Valute"]
+    KeyboardButton(text=str(i)) for i in available_currency
 ]
 
 builder = ReplyKeyboardBuilder()
