@@ -19,7 +19,7 @@ async def get_currency_list(message: Message):
 @router.callback_query(F.data == 'else')
 async def button_another_press(callback: CallbackQuery):
     await callback.message.edit_text(
-        text='Выбери другую валюту',
+        text=LEXICON_RU['choose_else'],
         reply_markup=create_inline_kb(3, *available_currency)
     )
 
