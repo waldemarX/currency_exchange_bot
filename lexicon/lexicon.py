@@ -7,7 +7,9 @@ LEXICON_RU: dict[str, str] = {
 /currency - команда для выбора валюты""",
     'no_echo': 'Кажется, я не знаю что вы от меня хотите.',
     'valute': 'Выберите валюту',
-    'exchange': 'Стоимость валюты'
+    'exchange': 'Стоимость валюты',
+    'else': 'Узнаем курс другой валюты?',
+    'another': 'Давай',
 }
 
 LEXICON_COMMANDS_RU: dict[str, str] = {
