@@ -3,6 +3,7 @@ from aiogram.types import Message, ReplyKeyboardRemove
 from aiogram.filters import Command, CommandStart
 from lexicon.lexicon import LEXICON_RU
 from keyboards.keyboards import currency_keyboard, data
+from services.sevices import get_currency
 
 router = Router()
 
@@ -27,8 +28,7 @@ async def process_valute(message: Message):
 
 @router.message(F.text.in_(data['Valute']))
 async def process_cost(message: Message):
-    currency = data["Valute"][message.text]["Name"]
-    price = str(data["Valute"][message.text]["Value"])
+    currency, price = get_currency(message.text)
     await message.answer(
         text=f'{LEXICON_RU["exchange"]} {currency} --> {price} рублей',
         reply_markup=ReplyKeyboardRemove()
